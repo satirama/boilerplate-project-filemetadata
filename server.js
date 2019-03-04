@@ -27,6 +27,6 @@ app.listen(process.env.PORT || 3000, function () {
 app.post("/api/fileanalyse",upload.single('upfile'),function(req, res){
   res.json({
     fileName: req.file.originalname,
-    fileSize: req.file.size/1000 + 'KB'
+    fileSize: req.file.size + ' bytes'
   });
 });
